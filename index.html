@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Izradi profesionalni CV</title>
+    <title>CVForge-Izradi profesionalni CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Izradi svoj CV</h1>
+<img src="logo.png" alt="CVForge logo" class="logo">
+        <h1>CVForge</h1>
         <p>Unesi podatke i odmah pregledaj svoj životopis.</p>
     </header>
 
@@ -19,6 +20,14 @@
         <section class="forma">
 
             <h2>Osobni podaci</h2>
+<label for="predlozakCV">Predložak CV-a</label>
+
+<select id="predlozakCV" onchange="document.getElementById('cv').className=this.value">
+    <option value="moderni">Moderni</option>
+    <option value="klasicni">Klasični</option>
+    <option value="minimalni">Minimalistički</option>
+</select>
+
 <label for="bojaCV">Boja CV-a</label>
 
 <select id="bojaCV">

@@ -370,6 +370,22 @@ pdfGumb.addEventListener("click", function () {
     document.body.appendChild(biblioteka);
 });
 
+const predlozakCV = document.getElementById("predlozakCV");
+const cvPredlozak = document.getElementById("cv");
+
+predlozakCV.addEventListener("change", function () {
+    cvPredlozak.classList.remove(
+        "moderni",
+        "klasicni",
+        "minimalni"
+    );
+
+    cvPredlozak.classList.add(predlozakCV.value);
+});
+
+// Moderni predložak odmah pri pokretanju
+cvPredlozak.classList.add("moderni");
+
 
 
 
