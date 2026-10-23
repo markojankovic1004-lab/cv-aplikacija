@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izradi profesionalni CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Izradi svoj CV</h1>
+        <p>Unesi podatke i odmah pregledaj svoj životopis.</p>
+    </header>
+
+    <main class="app">
+
+        <section class="forma">
+
+            <h2>Osobni podaci</h2>
+<label for="bojaCV">Boja CV-a</label>
+
+<select id="bojaCV">
+    <option value="#2563eb">Plava</option>
+    <option value="#16a34a">Zelena</option>
+    <option value="#dc2626">Crvena</option>
+    <option value="#111827">Crna</option>
+</select>
+
+<label for="fotografija">Fotografija</label>
+<input type="file" id="fotografija" accept="image/*">
+
+
+
+            <label for="ime">Ime i prezime</label>
+            <input type="text" id="ime" placeholder="Upiši ime i prezime">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Upiši email">
+
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" placeholder="Upiši broj telefona">
+
+            <label for="adresa">Mjesto stanovanja</label>
+            <input type="text" id="adresa" placeholder="Upiši grad ili adresu">
+
+            <h2>O meni</h2>
+
+            <label for="opis">Kratki osobni opis</label>
+            <textarea id="opis" placeholder="Napiši nekoliko rečenica o sebi"></textarea>
+
+            <h2>Radno iskustvo</h2>
+
+            <label for="posao">Radno mjesto i poslodavac</label>
+            <input type="text" id="posao" placeholder="Primjer: Konobar, Hotel Sunce">
+
+            <label for="iskustvo">Opis radnog iskustva</label>
+            <textarea id="iskustvo" placeholder="Opiši svoje zadatke i iskustvo"></textarea>
+<button type="button" id="dodajPosao">+ Dodaj još jedno radno iskustvo</button>
+
+
+            <h2>Obrazovanje</h2>
+
+            <label for="obrazovanje">Škola ili obrazovanje</label>
+            <textarea id="obrazovanje" placeholder="Upiši završenu školu i smjer"></textarea><button type="button" id="dodajObrazovanje">
+    + Dodaj još jedno obrazovanje
+</button>
+
+
+
+
+            <h2>Vještine</h2>
+
+            <label for="vjestine">Tvoje vještine</label>
+            <textarea id="vjestine" placeholder="Primjer: rad s gostima, prodaja, rad na računalu"></textarea>
+<h2>Jezici</h2>
+
+<label for="jezik">Jezik</label>
+<input type="text" id="jezik" placeholder="Primjer: Engleski">
+
+<label for="razinaJezika">Razina znanja</label>
+<select id="razinaJezika">
+    <option value="Osnovno">Osnovno</option>
+    <option value="Srednje">Srednje</option>
+    <option value="Napredno">Napredno</option>
+    <option value="Izvrsno">Izvrsno</option>
+    <option value="Materinski">Materinski</option>
+</select><button type="button" id="dodajJezik">
+    + Dodaj još jedan jezik
+</button>
+
+
+
+            
+
+        </section>
+<button type="button" id="preuzmiPDF">
+    Preuzmi CV kao PDF
+</button>
+<button type="button" id="noviCV">
+    Novi CV - očisti sve
+</button>
+
+
+        <section class="pregled">
+
+            <div id="cv">
+<img id="cvFotografija" alt="Fotografija kandidata">
+
+                <h1 id="cvIme">Ime i prezime</h1>
+
+                <div class="kontakt">
+                    <p id="cvEmail">Email</p>
+                    <p id="cvTelefon">Telefon</p>
+                    <p id="cvAdresa">Mjesto stanovanja</p>
+                </div>
+
+                <h2>O meni</h2>
+                <p id="cvOpis">Ovdje će se prikazati tvoj osobni opis.</p>
+
+                <h2>Radno iskustvo</h2>
+                <h3 id="cvPosao">Radno mjesto i poslodavac</h3>
+                <p id="cvIskustvo">Ovdje će se prikazati radno iskustvo.</p>
+
+                <h2>Obrazovanje</h2>
+                <p id="cvObrazovanje">Ovdje će se prikazati obrazovanje.</p>
+
+                <h2>Vještine</h2>
+                <p id="cvVjestine">Ovdje će se prikazati vještine.</p>
+<h2>Jezici</h2>
+<p id="cvJezik">Jezik - razina znanja</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

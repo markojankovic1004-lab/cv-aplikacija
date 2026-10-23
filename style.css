@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    color: #1f2937;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    color: white;
+}
+
+header p {
+    margin: 0;
+    color: white;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.forma,
+.pregled {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.forma h2 {
+    margin-top: 30px;
+    padding-bottom: 8px;
+    color: #2563eb;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.forma h2:first-child {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#cv {
+    min-height: 700px;
+    padding: 35px;
+    background: white;
+    border-top: 10px solid #2563eb;
+}
+
+#cv h1 {
+    margin-top: 0;
+    color: #1e3a8a;
+    font-size: 34px;
+    text-align: left;
+}
+
+#cv h2 {
+    margin-top: 30px;
+    padding-bottom: 7px;
+    color: #2563eb;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+#cv h3 {
+    margin-bottom: 7px;
+}
+
+#cv p {
+    text-align: left;
+    color: #475569;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.kontakt {
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.kontakt p {
+    margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    header,
+    .forma {
+        display: none;
+    }
+
+    .app {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pregled {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    #cv {
+        border-top: none;
+    }
+}
+
+#cvFotografija {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2563eb;
+    display: none;
+    margin-bottom: 20px;
+}
+
+#noviCV {
+    background: #dc2626;
+}
+
+#noviCV:hover {
+    background: #b91c1c;
+}
+
+#dodajPosao,
+#dodajObrazovanje,
+#dodajJezik {
+    background: #0f766e;
+}
+
+#dodajPosao:hover,
+#dodajObrazovanje:hover,
+#dodajJezik:hover {
+    background: #115e59;
+}
+
+.obrisi-posao,
+.obrisi-obrazovanje,
+.obrisi-jezik {
+    background: #ef4444;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.obrisi-posao:hover,
+.obrisi-obrazovanje:hover,
+.obrisi-jezik:hover {
+    background: #dc2626;
+}
+
+/* ===== ZAVRSNO ULJEPSAVANJE ===== */
+
+body {
+    background: linear-gradient(135deg, #eef4ff, #f8fafc);
+}
+
+header {
+    padding: 38px 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+}
+
+.app {
+    gap: 35px;
+}
+
+.forma,
+.pregled {
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.10);
+}
+
+.forma {
+    padding: 35px;
+}
+
+.forma h2 {
+    font-size: 22px;
+    margin-top: 35px;
+}
+
+input,
+textarea,
+select {
+    transition: 0.2s ease;
+}
+
+input,
+textarea {
+    background: #fafcff;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: #94a3b8;
+}
+
+button {
+    min-height: 50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+
+#cv {
+    border-radius: 10px;
+    padding: 42px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+#cv h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+#cv h2 {
+    font-size: 20px;
+    margin-top: 32px;
+}
+
+#cv p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+#cvFotografija {
+    width: 140px;
+    height: 140px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+.kontakt {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 14px 18px;
+}
+
+#preuzmiPDF {
+    background: #2563eb;
+}
+
+#preuzmiPDF:hover {
+    background: #1d4ed8;
+}
+
+/* MOBITEL */
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    .app {
+        gap: 20px;
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    .forma,
+    .pregled {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    #cv {
+        padding: 25px;
+    }
+
+    #cv h1 {
+        font-size: 30px;
+    }
+
+    #cvFotografija {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+
+
