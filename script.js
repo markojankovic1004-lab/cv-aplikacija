@@ -336,7 +336,38 @@ noviCV.addEventListener("click", function () {
 const pdfGumb = document.getElementById("preuzmiPDF");
 
 pdfGumb.addEventListener("click", function () {
-    window.print();
+    const biblioteka = document.createElement("script");
+
+    biblioteka.src =
+        "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+
+    biblioteka.onload = function () {
+        const cvZaPDF = document.getElementById("cv");
+
+        const postavke = {
+            margin: 10,
+            filename: "Moj-CV.pdf",
+            image: {
+                type: "jpeg",
+                quality: 0.98
+            },
+            html2canvas: {
+                scale: 2
+            },
+            jsPDF: {
+                unit: "mm",
+                format: "a4",
+                orientation: "portrait"
+            }
+        };
+
+        html2pdf()
+            .set(postavke)
+            .from(cvZaPDF)
+            .save();
+    };
+
+    document.body.appendChild(biblioteka);
 });
 
 const predlozakCV = document.getElementById("predlozakCV");
@@ -355,6 +386,17 @@ predlozakCV.addEventListener("change", function () {
 // Moderni predložak odmah pri pokretanju
 cvPredlozak.classList.add("moderni");
 
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(function () {
+                console.log("CVForge service worker aktivan");
+            })
+            .catch(function (error) {
+                console.log("Greška service workera:", error);
+            });
+    });
+}
 
 
 
