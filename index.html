@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <link rel="manifest"
+ href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVForge-Izradi profesionalni CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+<img src="logo.png" alt="CVForge logo" class="logo">
+        <h1>CVForge</h1>
+        <p>Unesi podatke i odmah pregledaj svoj životopis.</p>
+    </header>
+
+    <main class="app">
+
+        <section class="forma">
+
+            <h2>Osobni podaci</h2>
+<label for="predlozakCV">Predložak CV-a</label>
+
+<select id="predlozakCV" onchange="document.getElementById('cv').className=this.value">
+    <option value="moderni">Moderni</option>
+    <option value="klasicni">Klasični</option>
+    <option value="minimalni">Minimalistički</option>
+</select>
+
+<label for="bojaCV">Boja CV-a</label>
+
+<select id="bojaCV">
+    <option value="#2563eb">Plava</option>
+    <option value="#16a34a">Zelena</option>
+    <option value="#dc2626">Crvena</option>
+    <option value="#111827">Crna</option>
+</select>
+
+<label for="fotografija">Fotografija</label>
+<input type="file" id="fotografija" accept="image/*">
+
+
+
+            <label for="ime">Ime i prezime</label>
+            <input type="text" id="ime" placeholder="Upiši ime i prezime">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Upiši email">
+
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" placeholder="Upiši broj telefona">
+
+            <label for="adresa">Mjesto stanovanja</label>
+            <input type="text" id="adresa" placeholder="Upiši grad ili adresu">
+            
+            <label for="pozicija">Željena pozicija</label>
+            <input type="text" id="pozicija" placeholder="Primjer: Automehatroničar, konobar, prodavač">
+            <label for="linkedin">LinkedIn profil</label>
+            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/tvoje-ime">
+            <label for="portfolio">Portfolio / web stranica</label>
+            <input type="url" id="portfolio" placeholder="https://moja-stranica.com">
+
+
+            <h2>O meni</h2>
+
+            <label for="opis">Kratki osobni opis</label>
+            <textarea id="opis" placeholder="Napiši nekoliko rečenica o sebi"></textarea>
+
+            <h2>Radno iskustvo</h2>
+
+            <label for="posao">Radna pozicija</label>
+            <input type="text" id="posao" placeholder="Primjer: Konobar">
+            <label for="poslodavac">Poslodavac</label>
+            <input type="text" id="poslodavac" placeholder="Primjer: Hotel Sunce">
+            <label for="mjestoRada">Mjesto rada</label>
+            <input type="text" id="mjestoRada" placeholder="Primjer: Korčula">
+            <label for="datumOd">Početak rada</label>
+            <input type="month" id="datumOd">
+            <label for="datumDo">Završetak rada</label>
+            <input type="month" id="datumDo">
+            <label>
+    <input type="checkbox" id="trenutnoRadi">
+    Trenutno radim ovdje
+</label>
+
+            
+            <label for="iskustvo">Opis radnog iskustva</label>
+            <textarea id="iskustvo" placeholder="Opiši svoje zadatke i 
+            iskustvo"></textarea>
+            <label for="postignuca">Ključna postignuća</label>
+            <textarea id="postignuca" placeholder="Primjer: povećao prodaju, obučavao nove zaposlenike, poboljšao zadovoljstvo                    gostiju..."></textarea>
+            <button type="button" id="dodajPosao">+ Dodaj još jedno radno iskustvo</button>
+
+
+            <h2>Obrazovanje</h2>
+
+            <label for="obrazovanje">Naziv škole / fakulteta</label>
+            <textarea id="obrazovanje" placeholder="Upiši završenu školu i 
+            smjer"></textarea>
+            <label for="smjer">Smjer / program obrazovanja</label>
+            <input type="text" id="smjer" placeholder="Primjer: Automehatroničar">
+            <label for="kvalifikacija">Stečena kvalifikacija / zanimanje</label>
+            <input type="text" id="kvalifikacija" placeholder="Primjer: Automehatroničar">
+            <label for="mjestoSkole">Mjesto školovanja</label>
+            <input type="text" id="mjestoSkole" placeholder="Primjer: Sisak">
+            <label for="skolaOd">Početak obrazovanja</label>
+            <input type="month" id="skolaOd">
+            <label for="skolaDo">Završetak obrazovanja</label>
+            <input type="month" id="skolaDo">
+            <label>
+    <input type="checkbox" id="trenutnoSkolovanje">
+    Trenutno se školujem
+</label>
+            <button type="button" id="dodajObrazovanje">+ Dodaj još jedno obrazovanje
+
+</button>
+
+<h2>Certifikati i tečajevi</h2>
+
+<label for="certifikat">Naziv certifikata / tečaja</label>
+<input type="text" id="certifikat" placeholder="Primjer: HACCP certifikat">
+
+<label for="ustanovaCertifikata">Ustanova / izdavatelj</label>
+<input type="text" id="ustanovaCertifikata" placeholder="Primjer: Hrvatska gospodarska komora">
+
+<label for="datumCertifikata">Datum stjecanja</label>
+<input type="month" id="datumCertifikata">
+
+<button type="button" id="dodajCertifikat">+ Dodaj još jedan certifikat / tečaj</button>
+
+<h2>Projekti</h2>
+
+<label for="projektNaziv">Naziv projekta</label>
+<input type="text" id="projektNaziv" placeholder="Primjer: CVForge">
+
+<label for="projektUloga">Moja uloga</label>
+<input type="text" id="projektUloga" placeholder="Primjer: Autor projekta">
+
+<label for="projektOpis">Opis projekta</label>
+<textarea id="projektOpis" placeholder="Ukratko opiši projekt i što si napravio"></textarea>
+
+<label for="projektLink">Link projekta</label>
+<input type="url" id="projektLink" placeholder="https://...">
+
+<label for="projektDatum">Datum projekta</label>
+<input type="month" id="projektDatum">
+
+<button type="button" id="dodajProjekt">+ Dodaj još jedan projekt</button>
+<h2>Volontiranje</h2>
+
+<label for="volOrganizacija">Organizacija</label>
+<input type="text" id="volOrganizacija" placeholder="Primjer: Crveni križ">
+
+<label for="volUloga">Uloga / aktivnost</label>
+<input type="text" id="volUloga" placeholder="Primjer: Volonter">
+
+<label for="volMjesto">Mjesto</label>
+<input type="text" id="volMjesto" placeholder="Primjer: Sisak">
+
+<label for="volOd">Početak volontiranja</label>
+<input type="month" id="volOd">
+
+<label for="volDo">Završetak volontiranja</label>
+<input type="month" id="volDo">
+
+<label for="volOpis">Opis aktivnosti</label>
+<textarea id="volOpis" placeholder="Opiši aktivnosti, odgovornosti i stečene vještine"></textarea>
+
+<button type="button" id="dodajVolontiranje">+ Dodaj još jedno volontiranje</button>
+
+<h2>Hobiji i interesi</h2>
+
+<label for="hobiji">Hobiji i interesi</label>
+<textarea id="hobiji" placeholder="Primjer: Futsal, trčanje, tehnologija, putovanja"></textarea>
+
+            <h2>Vještine</h2>
+
+            <label for="vjestine">Tvoje vještine</label>
+            <textarea id="vjestine" placeholder="Primjer: rad s gostima, prodaja, rad na računalu"></textarea>
+<h2>Jezici</h2>
+
+<label for="jezik">Jezik</label>
+<input type="text" id="jezik" placeholder="Primjer: Engleski">
+
+<label for="razinaJezika">Razina znanja</label>
+<select id="razinaJezika">
+    <option value="Osnovno">Osnovno</option>
+    <option value="Srednje">Srednje</option>
+    <option value="Napredno">Napredno</option>
+    <option value="Izvrsno">Izvrsno</option>
+    <option value="Materinski">Materinski</option>
+</select><button type="button" id="dodajJezik">
+    + Dodaj još jedan jezik
+</button>
+
+
+
+            
+
+        </section>
+<button type="button" id="preuzmiPDF">
+    Preuzmi CV kao PDF
+</button>
+<button type="button" id="noviCV">
+    Novi CV - očisti sve
+</button>
+
+
+        <section class="pregled">
+
+            <div id="cv">
+<img id="cvFotografija" alt="Fotografija kandidata">
+
+                <h1 id="cvIme">Ime i prezime</h1>
+                <p id="cvPozicija">Željena pozicija</p>
+                <div class="kontakt">
+                    <p id="cvEmail">Email</p>
+                    <p id="cvTelefon">Telefon</p>
+                    <p id="cvAdresa">Mjesto stanovanja</p>
+                    <p id="cvLinkedin">LinkedIn</p>
+                    <p id="cvPortfolio">Portfolio / web stranica</p>
+                </div>
+
+                <h2>O meni</h2>
+                <p id="cvOpis">Ovdje će se prikazati tvoj osobni opis.</p>
+
+                <h2>Radno iskustvo</h2>
+                <h3 id="cvPosao">Radno mjesto i poslodavac</h3>
+                <p id="cvPoslodavac">Poslodavac</p>
+                <p id="cvMjestoRada">Mjesto rada</p>
+                <p id="cvRazdobljeRada">Razdoblje rada</p>
+                <p id="cvIskustvo">Ovdje će se prikazati radno iskustvo.</p>
+                <p id="cvPostignuca">Ključna postignuća</p>
+
+                <h2>Obrazovanje</h2>
+                <p id="cvObrazovanje">Ovdje će se prikazati obrazovanje.</p>
+                <p id="cvSmjer">Smjer / program obrazovanja</p>
+                <p id="cvKvalifikacija">Stečena kvalifikacija / zanimanje</p>
+                <p id="cvMjestoSkole">Mjesto školovanja</p>
+                <p id="cvRazdobljeSkole">Razdoblje obrazovanja</p>
+                <h2>Certifikati i tečajevi</h2>
+                <p id="cvCertifikat">Naziv certifikata / tečaja</p>
+                <p id="cvUstanovaCertifikata">Ustanova / izdavatelj</p>
+                <p id="cvDatumCertifikata">Datum stjecanja</p>
+                <h2>Projekti</h2>
+                <p id="cvProjektNaziv">Naziv projekta</p>
+                <p id="cvProjektUloga">Moja uloga</p>
+                <p id="cvProjektOpis">Opis projekta</p>
+                <p id="cvProjektLink">Link projekta</p>
+                <p id="cvProjektDatum">Datum projekta</p>
+                <h2>Volontiranje</h2>
+                <p id="cvVolOrganizacija">Organizacija</p>
+                <p id="cvVolUloga">Uloga / aktivnost</p>
+                <p id="cvVolMjesto">Mjesto</p>
+                <p id="cvVolRazdoblje">Razdoblje volontiranja</p>
+                <p id="cvVolOpis">Opis aktivnosti</p>
+
+                <h2>Vještine</h2>
+                <p id="cvVjestine">Ovdje će se prikazati vještine.</p>
+<h2>Jezici</h2>
+<p id="cvJezik">Jezik - razina znanja</p>
+<h2>Hobiji i interesi</h2>
+<p id="cvHobiji">Ovdje će se prikazati hobiji i interesi.</p>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
